@@ -3,8 +3,30 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Грифон — Монтаж видеонаблюдения в Рязани | grifun.ru</title>
-<meta name="description" content="ООО «Грифон» — профессиональный монтаж систем видеонаблюдения в Рязани и Рязанской области. Установка IP-камер, СКС, СКУД, ОПС. Гарантия 2 года. Бесплатный выезд инженера.">
+<title>Монтаж видеонаблюдения в Рязани под ключ — цены от 15 000 ₽ | Грифон</title>
+<meta name="description" content="Установка систем видеонаблюдения в Рязани и области: IP-камеры, СКС, СКУД, сигнализация. Работаем с 2015 года. Гарантия 2 года. Бесплатный выезд инженера. Цены от 15 000 ₽. ☎ Оставьте заявку онлайн.">
+<meta name="keywords" content="видеонаблюдение рязань, монтаж камер видеонаблюдения рязань, установка камер рязань, видеонаблюдение под ключ рязань, ip камеры рязань, скс монтаж рязань, скуд рязань">
+<meta name="robots" content="index, follow">
+<meta name="author" content="ООО Грифон">
+<meta name="geo.region" content="RU-RYA">
+<meta name="geo.placename" content="Рязань">
+<link rel="canonical" href="https://grifun.ru/">
+
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="Монтаж видеонаблюдения в Рязани под ключ | Грифон">
+<meta property="og:description" content="Установка IP-камер, СКС и систем контроля доступа в Рязани и области. Гарантия 2 года. Бесплатный выезд инженера.">
+<meta property="og:url" content="https://grifun.ru/">
+<meta property="og:site_name" content="Грифон">
+<meta property="og:locale" content="ru_RU">
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Монтаж видеонаблюдения в Рязани под ключ | Грифон">
+<meta name="twitter:description" content="Установка IP-камер, СКС и систем контроля доступа. Гарантия 2 года. Бесплатный выезд инженера.">
+
+<!-- Favicon -->
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%23f5b544'/%3E%3Cpath d='M20 14c0-4 4-7 8-7s7 3 7 7v6h5l-4 4h-1v6l-3-2-2 2v-6h-4v-4h-6zm7-1a1.5 1.5 0 100 3 1.5 1.5 0 000-3z' fill='%230b0a08'/%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@300;400;500;600;700;800&family=Manrope:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
@@ -962,6 +984,78 @@
     margin-top: 20px;
   }
 
+  /* ============ GEOGRAPHY ============ */
+  .geo-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+  }
+
+  .geo-city {
+    background: var(--panel);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 24px;
+    transition: all 0.25s;
+  }
+
+  .geo-city:hover {
+    border-color: var(--accent);
+    transform: translateY(-2px);
+  }
+
+  .geo-city.geo-main {
+    grid-column: span 2;
+    background: linear-gradient(135deg, rgba(245, 181, 68, 0.08), rgba(245, 181, 68, 0.02));
+    border-color: rgba(245, 181, 68, 0.3);
+  }
+
+  .geo-city.geo-all {
+    grid-column: span 2;
+  }
+
+  .geo-label {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    color: var(--text-mute);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    margin-bottom: 8px;
+  }
+
+  .geo-name {
+    font-family: 'Unbounded', sans-serif;
+    font-weight: 600;
+    font-size: 22px;
+    letter-spacing: -0.015em;
+    color: var(--text);
+    margin-bottom: 6px;
+  }
+
+  .geo-main .geo-name,
+  .geo-all .geo-name {
+    color: var(--accent);
+    font-size: 26px;
+  }
+
+  .geo-note {
+    font-size: 13px;
+    color: var(--text-dim);
+    line-height: 1.4;
+  }
+
+  @media (max-width: 1024px) {
+    .geo-grid { grid-template-columns: repeat(2, 1fr); }
+    .geo-city.geo-main,
+    .geo-city.geo-all { grid-column: span 2; }
+  }
+
+  @media (max-width: 640px) {
+    .geo-grid { grid-template-columns: 1fr; }
+    .geo-city.geo-main,
+    .geo-city.geo-all { grid-column: span 1; }
+  }
+
   /* ============ CTA / CONTACT ============ */
   .cta {
     background: var(--bg-2);
@@ -1115,6 +1209,63 @@
     margin-top: 16px;
   }
 
+  .form-field-consent {
+    margin-bottom: 16px;
+  }
+
+  .consent-label {
+    display: flex;
+    gap: 12px;
+    cursor: pointer;
+    align-items: flex-start;
+  }
+
+  .consent-checkbox {
+    position: absolute;
+    opacity: 0;
+    pointer-events: none;
+  }
+
+  .consent-box {
+    flex-shrink: 0;
+    width: 18px;
+    height: 18px;
+    border: 1.5px solid var(--border);
+    border-radius: 4px;
+    background: var(--panel);
+    position: relative;
+    margin-top: 2px;
+    transition: all 0.15s;
+  }
+
+  .consent-checkbox:checked + .consent-box {
+    background: var(--accent);
+    border-color: var(--accent);
+  }
+
+  .consent-checkbox:checked + .consent-box::after {
+    content: '';
+    position: absolute;
+    left: 5px;
+    top: 1px;
+    width: 5px;
+    height: 10px;
+    border: solid var(--bg);
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+  }
+
+  .consent-text {
+    font-size: 13px;
+    color: var(--text-dim);
+    line-height: 1.4;
+  }
+
+  .consent-text a {
+    color: var(--accent);
+    text-decoration: underline;
+  }
+
   /* ============ FOOTER ============ */
   footer {
     background: var(--bg);
@@ -1225,6 +1376,110 @@
   .delay-3 { animation-delay: 0.3s; }
   .delay-4 { animation-delay: 0.4s; }
 </style>
+<!-- Schema.org микроразметка -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "LocalBusiness",
+      "@id": "https://grifun.ru/#organization",
+      "name": "Грифон",
+      "legalName": "ООО «Грифон»",
+      "url": "https://grifun.ru/",
+      "telephone": "",
+      "email": "info@grifun.ru",
+      "description": "Монтаж систем видеонаблюдения, структурированных кабельных систем, систем контроля доступа и охранно-пожарной сигнализации в Рязани и Рязанской области.",
+      "priceRange": "от 9 500 ₽",
+      "foundingDate": "2015",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Рязань",
+        "addressRegion": "Рязанская область",
+        "addressCountry": "RU"
+      },
+      "areaServed": [
+        {"@type": "City", "name": "Рязань"},
+        {"@type": "City", "name": "Касимов"},
+        {"@type": "City", "name": "Сасово"},
+        {"@type": "City", "name": "Скопин"},
+        {"@type": "City", "name": "Шилово"},
+        {"@type": "City", "name": "Михайлов"},
+        {"@type": "City", "name": "Рыбное"},
+        {"@type": "AdministrativeArea", "name": "Рязанская область"}
+      ],
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+          "opens": "09:00",
+          "closes": "20:00"
+        }
+      ],
+      "sameAs": ["https://t.me/msrzn007"]
+    },
+    {
+      "@type": "Service",
+      "name": "Монтаж видеонаблюдения в Рязани",
+      "provider": {"@id": "https://grifun.ru/#organization"},
+      "areaServed": {"@type": "AdministrativeArea", "name": "Рязанская область"},
+      "serviceType": "Установка систем видеонаблюдения",
+      "offers": {
+        "@type": "AggregateOffer",
+        "lowPrice": "9500",
+        "highPrice": "165000",
+        "priceCurrency": "RUB",
+        "offerCount": "6"
+      }
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "За сколько можно смонтировать систему видеонаблюдения на 4 камеры?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "В типовой квартире или небольшом офисе — 1 рабочий день от приезда до запуска. Проектирование и закупка оборудования занимают ещё 1–2 дня. Итого 3 дня от заявки до работающей системы."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Можно ли смотреть камеры видеонаблюдения с телефона из любой точки?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Да. Настраиваем удалённый доступ через облачные сервисы производителя (Hik-Connect, DMSS и др.) или через P2P. Интернета на объекте и на вашем смартфоне достаточно, белый IP не требуется."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Сколько времени хранится видеозапись с камер?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Зависит от объёма диска, количества камер и разрешения. Для 4 камер 4 Мп и диска 2 ТБ — около 30 суток непрерывной записи. Подбираем конфигурацию под нужный срок архива."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Работаете с юрлицами? Можно оплатить по счёту?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Да, ООО «Грифон» работает с юрлицами и ИП. Выставляем счёт, заключаем договор, предоставляем акты выполненных работ. Компания на УСН, работаем без НДС."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Выезжаете за пределы Рязани?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Да, работаем по всей Рязанской области: Касимов, Сасово, Скопин, Шилово, Михайлов, Рыбное и другие города и посёлки. Выезд на объекты в пределах области — без наценки за километраж."
+          }
+        }
+      ]
+    }
+  ]
+}
+</script>
 </head>
 <body>
 
@@ -1264,6 +1519,7 @@
     <ul class="nav-links">
       <li><a href="#services">Услуги</a></li>
       <li><a href="#process">Как работаем</a></li>
+      <li><a href="#geography">География</a></li>
       <li><a href="#pricing">Цены</a></li>
       <li><a href="#faq">Вопросы</a></li>
       <li><a href="#contact">Контакты</a></li>
@@ -1391,8 +1647,8 @@
   <div class="container">
     <div class="section-header">
       <div class="section-label">01 / Услуги</div>
-      <h2 class="section-title">Что мы <span class="accent">монтируем</span></h2>
-      <p class="section-desc">От одной камеры над входной дверью до комплексных систем безопасности на промышленных объектах. Подбираем оборудование под задачу и бюджет.</p>
+      <h2 class="section-title">Услуги <span class="accent">по монтажу</span> видеонаблюдения в&nbsp;Рязани</h2>
+      <p class="section-desc">Устанавливаем системы видеонаблюдения для частных домов, квартир, офисов, магазинов, складов и производств в Рязани и Рязанской области. От одной камеры над входной дверью до комплексных систем безопасности на промышленных объектах. Подбираем оборудование Hikvision, Dahua, RVi под задачу и бюджет.</p>
     </div>
 
     <div class="services-grid">
@@ -1504,8 +1760,8 @@
   <div class="container">
     <div class="section-header">
       <div class="section-label">02 / Процесс</div>
-      <h2 class="section-title">Как мы <span class="accent">работаем</span></h2>
-      <p class="section-desc">Прозрачно, по этапам, без сюрпризов в смете. От первой заявки до подписания акта — 3–7 рабочих дней для типового объекта.</p>
+      <h2 class="section-title">Как мы <span class="accent">устанавливаем</span> видеонаблюдение</h2>
+      <p class="section-desc">Прозрачно, по этапам, без сюрпризов в смете. От первой заявки до подписания акта — 3–7 рабочих дней для типового объекта в Рязани. Для объектов в области — плюс 1–2 дня на логистику.</p>
     </div>
 
     <div class="process-steps">
@@ -1588,13 +1844,77 @@
   </div>
 </section>
 
+<!-- GEOGRAPHY -->
+<section id="geography">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-label">04 / География</div>
+      <h2 class="section-title">Монтаж видеонаблюдения в&nbsp;<span class="accent">Рязани и&nbsp;области</span></h2>
+      <p class="section-desc">Работаем по всей Рязанской области. Приезжаем на объект для замера и проектирования без наценки за километраж — в стоимость монтажа входит весь выезд, сколько бы ни было до объекта.</p>
+    </div>
+
+    <div class="geo-grid">
+      <div class="geo-city geo-main">
+        <div class="geo-label">Основной регион</div>
+        <div class="geo-name">Рязань</div>
+        <div class="geo-note">Все районы: Советский, Железнодорожный, Московский, Октябрьский. Выезд в день обращения.</div>
+      </div>
+      <div class="geo-city">
+        <div class="geo-label">Район</div>
+        <div class="geo-name">Касимов</div>
+      </div>
+      <div class="geo-city">
+        <div class="geo-label">Район</div>
+        <div class="geo-name">Сасово</div>
+      </div>
+      <div class="geo-city">
+        <div class="geo-label">Район</div>
+        <div class="geo-name">Скопин</div>
+      </div>
+      <div class="geo-city">
+        <div class="geo-label">Район</div>
+        <div class="geo-name">Шилово</div>
+      </div>
+      <div class="geo-city">
+        <div class="geo-label">Район</div>
+        <div class="geo-name">Михайлов</div>
+      </div>
+      <div class="geo-city">
+        <div class="geo-label">Район</div>
+        <div class="geo-name">Рыбное</div>
+      </div>
+      <div class="geo-city">
+        <div class="geo-label">Район</div>
+        <div class="geo-name">Ряжск</div>
+      </div>
+      <div class="geo-city">
+        <div class="geo-label">Район</div>
+        <div class="geo-name">Спасск-Рязанский</div>
+      </div>
+      <div class="geo-city">
+        <div class="geo-label">Район</div>
+        <div class="geo-name">Кораблино</div>
+      </div>
+      <div class="geo-city">
+        <div class="geo-label">Район</div>
+        <div class="geo-name">Новомичуринск</div>
+      </div>
+      <div class="geo-city geo-all">
+        <div class="geo-label">И другие</div>
+        <div class="geo-name">Вся Рязанская область</div>
+        <div class="geo-note">Посёлки, деревни, СНТ — без доплаты за удалённость</div>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- PRICING -->
 <section id="pricing">
   <div class="container">
     <div class="section-header">
-      <div class="section-label">04 / Готовые решения</div>
-      <h2 class="section-title">Комплекты <span class="accent">«под ключ»</span></h2>
-      <p class="section-desc">Типовые конфигурации для частых задач. Включают оборудование, монтаж, настройку и пусконаладку. Всё остальное — считаем индивидуально.</p>
+      <div class="section-label">05 / Готовые решения</div>
+      <h2 class="section-title">Комплекты видеонаблюдения <span class="accent">«под ключ»</span></h2>
+      <p class="section-desc">Типовые конфигурации для частых задач. Включают оборудование, монтаж, настройку и пусконаладку. Всё остальное — считаем индивидуально под объект в Рязани.</p>
     </div>
 
     <div class="pricing-grid">
@@ -1666,8 +1986,8 @@
 <section id="faq">
   <div class="container">
     <div class="section-header">
-      <div class="section-label">05 / Вопросы</div>
-      <h2 class="section-title">Что спрашивают <span class="accent">чаще всего</span></h2>
+      <div class="section-label">06 / Вопросы</div>
+      <h2 class="section-title">Ответы на частые вопросы о&nbsp;<span class="accent">видеонаблюдении</span></h2>
     </div>
 
     <div class="faq-list">
@@ -1789,6 +2109,13 @@
               <label class="form-label">Комментарий (необязательно)</label>
               <textarea class="form-input" placeholder="Сколько камер, особенности объекта, сроки"></textarea>
             </div>
+            <div class="form-field form-field-consent">
+              <label class="consent-label">
+                <input type="checkbox" class="consent-checkbox" checked>
+                <span class="consent-box"></span>
+                <span class="consent-text">Я согласен на <a href="/privacy.html" target="_blank">обработку персональных данных</a> в соответствии с 152-ФЗ</span>
+              </label>
+            </div>
             <button class="btn btn-primary">Отправить заявку в Telegram</button>
             <p class="form-note">По клику откроется чат с @msrzn007 с готовым сообщением — останется нажать «Отправить»</p>
           </div>
@@ -1842,7 +2169,7 @@
     </div>
     <div class="footer-bottom">
       <div>© 2015–2026 ООО «Грифон». Все права защищены.</div>
-      <div>ИНН 0000000000 · ОГРН 0000000000000</div>
+      <div><a href="/privacy.html" style="color:inherit; text-decoration:underline;">Политика конфиденциальности</a> · ИНН 0000000000</div>
     </div>
   </div>
 </footer>
@@ -1871,7 +2198,8 @@
 
   document.querySelector('.form .btn-primary').addEventListener('click', (e) => {
     e.preventDefault();
-    const inputs = document.querySelectorAll('.form-input');
+    const inputs = document.querySelectorAll('.form .form-input');
+    const consent = document.querySelector('.consent-checkbox');
     const name = inputs[0].value.trim();
     const phone = inputs[1].value.trim();
     const object = inputs[2].value.trim();
@@ -1879,6 +2207,11 @@
 
     if (!name || !phone) {
       alert('Пожалуйста, укажите имя и телефон');
+      return;
+    }
+
+    if (!consent.checked) {
+      alert('Для отправки заявки нужно согласие на обработку персональных данных');
       return;
     }
 
@@ -1894,7 +2227,6 @@
     const message = lines.join('\n');
 
     // Открываем Telegram с готовым сообщением
-    // На мобильном сработает нативное приложение, на десктопе - Telegram Web / Desktop
     const url = `https://t.me/${TG_USERNAME}?text=${encodeURIComponent(message)}`;
     window.open(url, '_blank');
 
