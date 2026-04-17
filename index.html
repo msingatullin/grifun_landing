@@ -117,24 +117,33 @@
 
   .nav-links a:hover { color: var(--accent); }
 
-  .nav-phone {
-    display: flex;
+  .nav-cta {
+    display: inline-flex;
     align-items: center;
     gap: 10px;
-    font-family: 'JetBrains Mono', monospace;
-    font-size: 15px;
-    font-weight: 500;
-    color: var(--text);
+    padding: 10px 20px;
+    background: linear-gradient(135deg, var(--accent), var(--accent-2));
+    color: var(--bg);
+    font-family: 'Manrope', sans-serif;
+    font-size: 14px;
+    font-weight: 600;
     text-decoration: none;
+    border-radius: 100px;
+    transition: all 0.2s;
+    box-shadow: 0 0 0 0 var(--accent-glow);
   }
 
-  .nav-phone::before {
-    content: '';
+  .nav-cta:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 8px 24px var(--accent-glow);
+  }
+
+  .nav-cta-dot {
     width: 8px;
     height: 8px;
-    background: var(--accent);
+    background: var(--bg);
     border-radius: 50%;
-    box-shadow: 0 0 10px var(--accent);
+    animation: pulse 2s infinite;
   }
 
   /* ============ HERO ============ */
@@ -1189,6 +1198,7 @@
     .container { padding: 0 20px; }
     .nav { padding: 16px 20px; }
     .nav-links { display: none; }
+    .nav-cta { padding: 8px 14px; font-size: 13px; }
     section { padding: 80px 0; }
     .hero { padding: 120px 0 60px; }
     .hero-stats { grid-template-columns: 1fr; gap: 20px; }
@@ -1258,7 +1268,10 @@
       <li><a href="#faq">Вопросы</a></li>
       <li><a href="#contact">Контакты</a></li>
     </ul>
-    <a href="tel:+74912000000" class="nav-phone">+7 (4912) 00-00-00</a>
+    <a href="#contact" class="nav-cta">
+      <span class="nav-cta-dot"></span>
+      Оставить заявку
+    </a>
   </div>
 </header>
 
@@ -1273,9 +1286,10 @@
           <span>● В эфире с 2015 года · Рязань</span>
         </div>
         <h1 class="fade-up delay-1">
-          Зоркий взгляд<br>
-          на&nbsp;каждый <span class="accent">ваш</span><br>
-          объект
+          Видеонаблюдение<br>
+          в&nbsp;<span class="accent">Рязани</span> —<br>
+          проект, монтаж,<br>
+          обслуживание
         </h1>
         <p class="hero-desc fade-up delay-2">
           «Грифон» проектирует и монтирует системы видеонаблюдения, СКС и контроля доступа в Рязани и области. Работаем с 2015 года. Гарантия 2 года на работы и оборудование.
@@ -1532,7 +1546,7 @@
         <div class="why-icon">01</div>
         <div class="why-content">
           <h3>Официальный договор</h3>
-          <p>ООО «Грифон», работаем с юрлицами и физлицами. Закрывающие документы, НДС по запросу.</p>
+          <p>ООО «Грифон» работает с юрлицами и физлицами. Заключаем договор и выдаём полный пакет закрывающих документов.</p>
         </div>
       </div>
       <div class="why-card">
@@ -1686,7 +1700,7 @@
           <span>Работаете с юрлицами? Можно оплатить по счёту?</span>
           <span class="faq-toggle">+</span>
         </div>
-        <div class="faq-answer">Да, ООО «Грифон» работает с юрлицами и ИП. Выставляем счёт, заключаем договор, предоставляем акты выполненных работ, УПД. НДС — по запросу.</div>
+        <div class="faq-answer">Да, ООО «Грифон» работает с юрлицами и ИП. Выставляем счёт, заключаем договор, предоставляем акты выполненных работ. Компания на УСН, работаем без НДС.</div>
       </div>
 
       <div class="faq-item">
@@ -1715,16 +1729,16 @@
       <div class="cta-grid">
         <div>
           <h2 class="cta-title">Оставьте заявку —<br>приедем <span class="accent">бесплатно</span></h2>
-          <p class="cta-desc">Инженер выезжает на объект, замеряет, консультирует и в течение 1–2 дней готовит проект и фиксированную смету. Никаких обязательств и скрытых платежей.</p>
+          <p class="cta-desc">Заполните форму — мы свяжемся с вами в Telegram, уточним детали и договоримся о бесплатном выезде инженера на объект. В течение 1–2 дней подготовим проект и фиксированную смету.</p>
 
           <ul class="contact-list">
             <li class="contact-item">
               <div class="contact-icon">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M21.5 4.5L2.5 12l6 2 2 7 3-4 5.5 4L21.5 4.5z"/><path d="M8.5 14l8.5-7.5"/></svg>
               </div>
               <div>
-                <div class="contact-label">Телефон</div>
-                <a href="tel:+74912000000" class="contact-value">+7 (4912) 00-00-00</a>
+                <div class="contact-label">Telegram</div>
+                <a href="https://t.me/msrzn007" target="_blank" rel="noopener" class="contact-value">@msrzn007</a>
               </div>
             </li>
             <li class="contact-item">
@@ -1775,8 +1789,8 @@
               <label class="form-label">Комментарий (необязательно)</label>
               <textarea class="form-input" placeholder="Сколько камер, особенности объекта, сроки"></textarea>
             </div>
-            <button class="btn btn-primary">Оставить заявку</button>
-            <p class="form-note">Нажимая «Оставить заявку», вы соглашаетесь с политикой обработки персональных данных</p>
+            <button class="btn btn-primary">Отправить заявку в Telegram</button>
+            <p class="form-note">По клику откроется чат с @msrzn007 с готовым сообщением — останется нажать «Отправить»</p>
           </div>
         </div>
       </div>
@@ -1820,7 +1834,7 @@
       <div class="footer-col">
         <h4>Контакты</h4>
         <ul>
-          <li><a href="tel:+74912000000">+7 (4912) 00-00-00</a></li>
+          <li><a href="https://t.me/msrzn007" target="_blank" rel="noopener">Telegram: @msrzn007</a></li>
           <li><a href="mailto:info@grifun.ru">info@grifun.ru</a></li>
           <li>Рязань</li>
         </ul>
@@ -1852,18 +1866,48 @@
   setInterval(updateCamTime, 1000);
   updateCamTime();
 
-  // Form submission
+  // Отправка заявки в Telegram через deep-link с предзаполненным текстом
+  const TG_USERNAME = 'msrzn007'; // ваш Telegram без @
+
   document.querySelector('.form .btn-primary').addEventListener('click', (e) => {
     e.preventDefault();
     const inputs = document.querySelectorAll('.form-input');
     const name = inputs[0].value.trim();
     const phone = inputs[1].value.trim();
+    const object = inputs[2].value.trim();
+    const comment = inputs[3].value.trim();
+
     if (!name || !phone) {
       alert('Пожалуйста, укажите имя и телефон');
       return;
     }
-    alert('Спасибо! Заявка принята. Перезвоним в течение 30 минут.');
-    inputs.forEach(i => i.value = '');
+
+    // Формируем сообщение заявки
+    const lines = [
+      '🔔 Заявка с сайта grifun.ru',
+      '',
+      `👤 Имя: ${name}`,
+      `📞 Телефон: ${phone}`,
+    ];
+    if (object) lines.push(`🏢 Объект: ${object}`);
+    if (comment) lines.push(`💬 Комментарий: ${comment}`);
+    const message = lines.join('\n');
+
+    // Открываем Telegram с готовым сообщением
+    // На мобильном сработает нативное приложение, на десктопе - Telegram Web / Desktop
+    const url = `https://t.me/${TG_USERNAME}?text=${encodeURIComponent(message)}`;
+    window.open(url, '_blank');
+
+    // Показываем подтверждение
+    const btn = document.querySelector('.form .btn-primary');
+    const originalText = btn.textContent;
+    btn.textContent = '✓ Открываем Telegram...';
+    btn.style.background = 'var(--accent-2)';
+    setTimeout(() => {
+      btn.textContent = originalText;
+      btn.style.background = '';
+      inputs.forEach(i => i.value = '');
+    }, 2500);
   });
 
   // Smooth scroll
