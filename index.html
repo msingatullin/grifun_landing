@@ -2,6 +2,7 @@
 <html lang="ru">
 <head>
 <meta charset="UTF-8">
+<meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Монтаж видеонаблюдения в Рязани под ключ — цены от 15 000 ₽ | Грифон</title>
 <meta name="description" content="Установка систем видеонаблюдения в Рязани и области: IP-камеры, СКС, СКУД, сигнализация. Работаем с 2015 года. Гарантия 2 года. Бесплатный выезд инженера. Цены от 15 000 ₽. ☎ Оставьте заявку онлайн.">
@@ -2095,11 +2096,11 @@
           <div class="form">
             <div class="form-field">
               <label class="form-label">Ваше имя</label>
-              <input type="text" class="form-input" placeholder="Как к вам обращаться">
+              <input type="text" class="form-input" placeholder="Как к вам обращаться" autocomplete="name">
             </div>
             <div class="form-field">
               <label class="form-label">Телефон</label>
-              <input type="tel" class="form-input" placeholder="+7 (___) ___-__-__">
+              <input type="tel" class="form-input" placeholder="+7 (___) ___-__-__" autocomplete="tel">
             </div>
             <div class="form-field">
               <label class="form-label">Объект</label>
@@ -2109,6 +2110,10 @@
               <label class="form-label">Комментарий (необязательно)</label>
               <textarea class="form-input" placeholder="Сколько камер, особенности объекта, сроки"></textarea>
             </div>
+            <!-- Honeypot-поле против спам-ботов. Скрыто от людей, но боты его заполняют. -->
+            <div style="position:absolute; left:-9999px; top:-9999px; visibility:hidden;" aria-hidden="true">
+              <label>Не заполняйте это поле <input type="text" class="hp-field" tabindex="-1" autocomplete="off"></label>
+            </div>
             <div class="form-field form-field-consent">
               <label class="consent-label">
                 <input type="checkbox" class="consent-checkbox" checked>
@@ -2116,8 +2121,8 @@
                 <span class="consent-text">Я согласен на <a href="/privacy.html" target="_blank">обработку персональных данных</a> в соответствии с 152-ФЗ</span>
               </label>
             </div>
-            <button class="btn btn-primary">Отправить заявку в Telegram</button>
-            <p class="form-note">По клику откроется чат с @msrzn007 с готовым сообщением — останется нажать «Отправить»</p>
+            <button class="btn btn-primary">Оставить заявку</button>
+            <p class="form-note">Перезвоним и напишем в Telegram в течение 30 минут в рабочее время</p>
           </div>
         </div>
       </div>
@@ -2193,53 +2198,131 @@
   setInterval(updateCamTime, 1000);
   updateCamTime();
 
-  // Отправка заявки в Telegram через deep-link с предзаполненным текстом
-  const TG_USERNAME = 'msrzn007'; // ваш Telegram без @
+  // ============================================================
+  // Отправка заявки напрямую в Telegram через Bot API
+  // ============================================================
+  const TG_BOT_TOKEN = 'PASTE_YOUR_BOT_TOKEN_HERE';
+  const TG_CHAT_ID = '7062881432';
 
-  document.querySelector('.form .btn-primary').addEventListener('click', (e) => {
+  // Собираем UTM-метки из URL, чтобы понимать откуда пришла заявка
+  function getUTMParams() {
+    const params = new URLSearchParams(window.location.search);
+    const utm = {};
+    ['utm_source','utm_medium','utm_campaign','utm_content','utm_term','yclid'].forEach(k => {
+      if (params.get(k)) utm[k] = params.get(k);
+    });
+    return utm;
+  }
+
+  document.querySelector('.form .btn-primary').addEventListener('click', async (e) => {
     e.preventDefault();
+    const btn = e.currentTarget;
+    if (btn.dataset.sending === '1') return; // защита от двойного клика
+
     const inputs = document.querySelectorAll('.form .form-input');
     const consent = document.querySelector('.consent-checkbox');
+    const honeypot = document.querySelector('.hp-field');
     const name = inputs[0].value.trim();
     const phone = inputs[1].value.trim();
     const object = inputs[2].value.trim();
     const comment = inputs[3].value.trim();
 
+    // Honeypot: если бот заполнил скрытое поле — молча "успех" без отправки
+    if (honeypot && honeypot.value) {
+      btn.textContent = '✓ Заявка отправлена';
+      inputs.forEach(i => i.value = '');
+      return;
+    }
+
     if (!name || !phone) {
       alert('Пожалуйста, укажите имя и телефон');
       return;
     }
-
     if (!consent.checked) {
       alert('Для отправки заявки нужно согласие на обработку персональных данных');
       return;
     }
 
-    // Формируем сообщение заявки
+    // Валидация телефона: минимум 10 цифр
+    const digits = phone.replace(/\D/g, '');
+    if (digits.length < 10) {
+      alert('Проверьте номер телефона — кажется, он неполный');
+      return;
+    }
+
+    // Защита от спама: не чаще раза в 30 секунд
+    const lastSent = parseInt(sessionStorage.getItem('lastFormSent') || '0');
+    if (Date.now() - lastSent < 30000) {
+      alert('Заявка уже отправлена. Если нужно ещё — подождите 30 секунд');
+      return;
+    }
+
+    // Формируем сообщение
+    const utm = getUTMParams();
     const lines = [
-      '🔔 Заявка с сайта grifun.ru',
+      '🔔 <b>Заявка с сайта grifun.ru</b>',
       '',
-      `👤 Имя: ${name}`,
-      `📞 Телефон: ${phone}`,
+      `👤 <b>Имя:</b> ${name}`,
+      `📞 <b>Телефон:</b> ${phone}`,
     ];
-    if (object) lines.push(`🏢 Объект: ${object}`);
-    if (comment) lines.push(`💬 Комментарий: ${comment}`);
+    if (object) lines.push(`🏢 <b>Объект:</b> ${object}`);
+    if (comment) lines.push(`💬 <b>Комментарий:</b> ${comment}`);
+    lines.push('');
+    lines.push(`🕐 ${new Date().toLocaleString('ru-RU', {timeZone: 'Europe/Moscow'})}`);
+    if (Object.keys(utm).length) {
+      lines.push('');
+      lines.push('📊 <b>Источник:</b>');
+      for (const [k, v] of Object.entries(utm)) {
+        lines.push(`  ${k}: <code>${v}</code>`);
+      }
+    }
     const message = lines.join('\n');
 
-    // Открываем Telegram с готовым сообщением
-    const url = `https://t.me/${TG_USERNAME}?text=${encodeURIComponent(message)}`;
-    window.open(url, '_blank');
-
-    // Показываем подтверждение
-    const btn = document.querySelector('.form .btn-primary');
+    // Отправка
+    btn.dataset.sending = '1';
     const originalText = btn.textContent;
-    btn.textContent = '✓ Открываем Telegram...';
-    btn.style.background = 'var(--accent-2)';
-    setTimeout(() => {
+    btn.textContent = 'Отправляем...';
+    btn.style.opacity = '0.7';
+
+    try {
+      const response = await fetch(`https://api.telegram.org/bot${TG_BOT_TOKEN}/sendMessage`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          chat_id: TG_CHAT_ID,
+          text: message,
+          parse_mode: 'HTML',
+          disable_web_page_preview: true
+        })
+      });
+
+      const data = await response.json();
+
+      if (data.ok) {
+        // Событие в Яндекс.Метрику (если счётчик установлен)
+        if (typeof ym !== 'undefined' && window.YM_COUNTER_ID) {
+          ym(window.YM_COUNTER_ID, 'reachGoal', 'form_sent');
+        }
+        sessionStorage.setItem('lastFormSent', Date.now().toString());
+        btn.textContent = '✓ Заявка принята — мы свяжемся';
+        btn.style.background = 'var(--accent-2)';
+        inputs.forEach(i => i.value = '');
+        setTimeout(() => {
+          btn.textContent = originalText;
+          btn.style.background = '';
+          btn.style.opacity = '';
+          btn.dataset.sending = '';
+        }, 5000);
+      } else {
+        throw new Error(data.description || 'Ошибка отправки');
+      }
+    } catch (err) {
+      console.error('Form error:', err);
       btn.textContent = originalText;
-      btn.style.background = '';
-      inputs.forEach(i => i.value = '');
-    }, 2500);
+      btn.style.opacity = '';
+      btn.dataset.sending = '';
+      alert('Не удалось отправить заявку. Попробуйте ещё раз или напишите нам в Telegram: @msrzn007');
+    }
   });
 
   // Smooth scroll
