@@ -49,14 +49,14 @@
   }
 
   * { margin: 0; padding: 0; box-sizing: border-box; }
-  html { scroll-behavior: smooth; }
+  html { scroll-behavior: smooth; overflow-x: clip; }
 
   body {
     font-family: 'Manrope', sans-serif;
     background: var(--bg);
     color: var(--text);
     line-height: 1.6;
-    overflow-x: hidden;
+    overflow-x: clip;
     font-weight: 400;
   }
 
@@ -1359,6 +1359,8 @@
     .cta-wrapper { padding: 36px 24px; }
     .tag-1 { left: -10px; }
     .tag-2 { right: -10px; }
+    .hero-griffin-bg { width: 100vw; height: 100vw; right: -28vw; }
+    .floating-tag { max-width: calc(100vw - 40px); }
   }
 
   /* Animations */
