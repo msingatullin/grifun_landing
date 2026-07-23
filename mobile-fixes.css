@@ -1,0 +1,12 @@
+/* Mobile layout fixes shared by the landing pages. */
+@media (max-width: 640px) {
+  html, body { overflow-x: hidden; }
+  .hero h1, .section-title, .cta-title { font-size: clamp(30px, 9vw, 46px); line-height: 1.08; overflow-wrap: anywhere; word-break: normal; }
+  .hero-content, .hero-visual, .services-grid, .pricing-grid, .why-grid, .cta-grid { min-width: 0; }
+  .hero-visual { width: 100%; max-width: 100%; }
+  .monitor-screen { grid-template-columns: 1fr !important; grid-template-rows: repeat(4, minmax(150px, 1fr)) !important; }
+  .cam-feed { min-height: 150px; }
+  .cam-label, .cam-time { font-size: 10px; }
+  .form-grid, .form-row { grid-template-columns: 1fr !important; display: grid; }
+  .form-input { max-width: 100%; }
+}
