@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
+<script src="/attribution.js" defer></script>
 <meta charset="UTF-8">
 <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="stylesheet" href="/mobile-fixes.css">
+
 <title>Монтаж видеонаблюдения в Сасове — цены, выезд бесплатно | Грифон</title>
 <meta name="description" content="Монтаж видеонаблюдения в Сасове и районе: IP-камеры, СКС, СКУД, сигнализация. Бесплатный выезд инженера, гарантия 2 года, цены от 15 000 ₽.">
 <meta name="keywords" content="видеонаблюдение сасово, монтаж камер сасово, установка видеонаблюдения сасово, ip камеры сасово, скс сасово, скуд сасово">
@@ -2263,13 +2265,8 @@
 
   // Собираем UTM-метки из URL, чтобы понимать откуда пришла заявка
   function getUTMParams() {
-    const params = new URLSearchParams(window.location.search);
-    const utm = {};
-    ['utm_source','utm_medium','utm_campaign','utm_content','utm_term','yclid'].forEach(k => {
-      if (params.get(k)) utm[k] = params.get(k);
-    });
-    return utm;
-  }
+      return window.grifunAttribution ? window.grifunAttribution.get() : {};
+    }
 
   document.querySelector('.form .btn-primary').addEventListener('click', async (e) => {
     e.preventDefault();

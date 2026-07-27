@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
+<script src="/attribution.js" defer></script>
 <meta charset="UTF-8">
 <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="stylesheet" href="/mobile-fixes.css">
+
 <title>Монтаж видеонаблюдения в Рязани под ключ — цены от 15 000 ₽ | Грифон</title>
 <meta name="description" content="Установка систем видеонаблюдения в Рязани и области: IP-камеры, СКС, СКУД, сигнализация. Работаем с 2015 года. Гарантия 2 года. Бесплатный выезд инженера. Цены от 15 000 ₽. ☎ Оставьте заявку онлайн.">
 <meta name="keywords" content="видеонаблюдение рязань, монтаж камер видеонаблюдения рязань, установка камер рязань, видеонаблюдение под ключ рязань, ip камеры рязань, скс монтаж рязань, скуд рязань">
@@ -2255,13 +2257,8 @@
 
   // Собираем UTM-метки из URL, чтобы понимать откуда пришла заявка
   function getUTMParams() {
-    const params = new URLSearchParams(window.location.search);
-    const utm = {};
-    ['utm_source','utm_medium','utm_campaign','utm_content','utm_term','yclid'].forEach(k => {
-      if (params.get(k)) utm[k] = params.get(k);
-    });
-    return utm;
-  }
+      return window.grifunAttribution ? window.grifunAttribution.get() : {};
+    }
 
   document.querySelector('.form .btn-primary').addEventListener('click', async (e) => {
     e.preventDefault();

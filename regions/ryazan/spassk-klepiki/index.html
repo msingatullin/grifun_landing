@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
+<script src="/attribution.js" defer></script>
 <meta charset="UTF-8">
 <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -2267,12 +2268,7 @@
 
   // Собираем UTM-метки из URL, чтобы понимать откуда пришла заявка
   function getUTMParams() {
-    const params = new URLSearchParams(window.location.search);
-    const utm = {};
-    ['utm_source','utm_medium','utm_campaign','utm_content','utm_term','yclid'].forEach(k => {
-      if (params.get(k)) utm[k] = params.get(k);
-    });
-    return utm;
+    return window.grifunAttribution ? window.grifunAttribution.get() : {};
   }
 
   document.querySelector('.form .btn-primary').addEventListener('click', async (e) => {
