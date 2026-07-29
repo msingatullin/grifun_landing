@@ -23,6 +23,8 @@
 <meta property="og:url" content="https://www.grifun.ru/">
 <meta property="og:site_name" content="Грифон">
 <meta property="og:locale" content="ru_RU">
+<meta property="og:image" content="https://www.grifun.ru/og-grifun.svg">
+<meta property="og:image:alt" content="Грифон — монтаж систем безопасности">
 
 <!-- Twitter Card -->
 <meta name="twitter:card" content="summary_large_image">
@@ -2145,22 +2147,22 @@
         </div>
 
         <div>
-          <div class="form">
+          <form class="form" id="lead-form" novalidate>
             <div class="form-field">
-              <label class="form-label">Ваше имя</label>
-              <input type="text" class="form-input" placeholder="Как к вам обращаться" autocomplete="name">
+              <label class="form-label" for="lead-name">Ваше имя</label>
+              <input id="lead-name" name="name" type="text" class="form-input" placeholder="Как к вам обращаться" autocomplete="name">
             </div>
             <div class="form-field">
-              <label class="form-label">Телефон</label>
-              <input type="tel" class="form-input" placeholder="+7 (___) ___-__-__" autocomplete="tel">
+              <label class="form-label" for="lead-phone">Телефон</label>
+              <input id="lead-phone" name="phone" type="tel" class="form-input" placeholder="+7 (___) ___-__-__" autocomplete="tel">
             </div>
             <div class="form-field">
-              <label class="form-label">Объект</label>
-              <input type="text" class="form-input" placeholder="Квартира / офис / склад / другое">
+              <label class="form-label" for="lead-object">Объект</label>
+              <input id="lead-object" name="object" type="text" class="form-input" placeholder="Квартира / офис / склад / другое">
             </div>
             <div class="form-field">
-              <label class="form-label">Комментарий (необязательно)</label>
-              <textarea class="form-input" placeholder="Сколько камер, особенности объекта, сроки"></textarea>
+              <label class="form-label" for="lead-comment">Комментарий (необязательно)</label>
+              <textarea id="lead-comment" name="comment" class="form-input" placeholder="Сколько камер, особенности объекта, сроки"></textarea>
             </div>
             <!-- Honeypot-поле против спам-ботов. Скрыто от людей, но боты его заполняют. -->
             <div style="position:absolute; left:-9999px; top:-9999px; visibility:hidden;" aria-hidden="true">
@@ -2168,14 +2170,14 @@
             </div>
             <div class="form-field form-field-consent">
               <label class="consent-label">
-                <input type="checkbox" class="consent-checkbox" checked>
+                <input id="lead-consent" name="consent" type="checkbox" class="consent-checkbox" checked>
                 <span class="consent-box"></span>
                 <span class="consent-text">Я согласен на <a href="/privacy.html" target="_blank">обработку персональных данных</a> в соответствии с 152-ФЗ</span>
               </label>
             </div>
-            <button class="btn btn-primary">Оставить заявку</button>
+            <button class="btn btn-primary" type="submit">Оставить заявку</button>
             <p class="form-note">Перезвоним и напишем в Telegram в течение 30 минут в рабочее время</p>
-          </div>
+          </form>
         </div>
       </div>
     </div>
