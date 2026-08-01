@@ -42,6 +42,16 @@ with LOG.open("a") as log:
         target = OUT / f"{name}.html"
         if target.exists():
             continue
+        seo_gate = subprocess.run([
+            sys.executable,
+            str(ROOT / "scripts" / "seo-query-gate.py"),
+            "--slug",
+            name,
+        ], cwd=ROOT)
+        if seo_gate.returncode:
+            log.write(f"[{index}/{len(topics)}] BLOCKED {name}: SEO query passport or cannibalization resolution required\n")
+            log.flush()
+            raise SystemExit(seo_gate.returncode)
         try:
             target.write_text(make_article(topic))
             log.write(f"[{index}/{len(topics)}] OK {name}\n")

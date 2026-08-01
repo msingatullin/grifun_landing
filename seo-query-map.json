@@ -1,0 +1,49 @@
+{
+  "version": 1,
+  "project": "Grifun",
+  "evidence": {
+    "core": "raw:seo/grifun/wordstat-20260801-162521.json",
+    "next_articles": "raw:seo/grifun/wordstat-20260801-162658.json",
+    "fstek_longtail": "raw:seo/grifun/wordstat-20260801-162727.json",
+    "classification": "НЧ <= 28; СЧ 29-839; ВЧ >= 840 запросов за последние 30 дней по РФ"
+  },
+  "articles": {
+    "fstek-pdn-2026-server-audit": {
+      "primary_query": "фстэк персональные данные 2026",
+      "intent": "informational",
+      "region": "Россия",
+      "language": "ru",
+      "target_url": "https://www.grifun.ru/blog/articles/fstek-pdn-2026-server-audit.html",
+      "pillar_url": "https://www.grifun.ru/blog/",
+      "cannibalization_status": "conflict",
+      "cannibalization_evidence": "Новая тема пересекается с fstek-personal-data-audit-2026.html и fstek-personal-data-2026-audit.html; требуется выбрать основной URL и объединить intent до публикации.",
+      "internal_links": [
+        "https://www.grifun.ru/blog/articles/fstek-personal-data-audit-2026.html",
+        "https://www.grifun.ru/blog/articles/fstek-personal-data-2026-audit.html"
+      ],
+      "measurements": [
+        {"query": "технический аудит защиты персональных данных", "frequency_class": "low", "frequency_value": 3, "source": "yandex-wordstat", "metric": "monthly_searches", "measurement_period": "last 30 days", "region": "Россия", "match_type": "broad phrase", "evidence_ref": "raw:seo/grifun/wordstat-20260801-162727.json#seed=технический-аудит-защиты-персональных-данных", "measured_at": "2026-08-01"},
+        {"query": "фстэк персональные данные 2026", "frequency_class": "medium", "frequency_value": 53, "source": "yandex-wordstat", "metric": "monthly_searches", "measurement_period": "last 30 days", "region": "Россия", "match_type": "broad phrase", "evidence_ref": "raw:seo/grifun/wordstat-20260801-162658.json#seed=фстэк-персональные-данные-2026", "measured_at": "2026-08-01"},
+        {"query": "аудит персональных данных", "frequency_class": "high", "frequency_value": 896, "source": "yandex-wordstat", "metric": "monthly_searches", "measurement_period": "last 30 days", "region": "Россия", "match_type": "broad phrase", "evidence_ref": "raw:seo/grifun/wordstat-20260801-162658.json#seed=аудит-персональных-данных", "measured_at": "2026-08-01"}
+      ]
+    },
+    "gost-59638-repair-sla-telemetry": {
+      "primary_query": "ремонт пожарной сигнализации",
+      "intent": "commercial",
+      "region": "Россия",
+      "language": "ru",
+      "target_url": "https://www.grifun.ru/blog/articles/gost-59638-repair-sla-telemetry.html",
+      "pillar_url": "https://www.grifun.ru/blog/",
+      "cannibalization_status": "conflict",
+      "cannibalization_evidence": "Новая тема пересекается с gost-59638-fire-alarm-sla-diagnostics.html по ГОСТ 59638, SLA и диагностике; нужен единый основной URL либо доказанное разведение intent.",
+      "internal_links": [
+        "https://www.grifun.ru/blog/articles/gost-59638-fire-alarm-sla-diagnostics.html"
+      ],
+      "measurements": [
+        {"query": "обслуживание систем пожарной сигнализации цена", "frequency_class": "low", "frequency_value": 17, "source": "yandex-wordstat", "metric": "monthly_searches", "measurement_period": "last 30 days", "region": "Россия", "match_type": "broad phrase", "evidence_ref": "raw:seo/grifun/wordstat-20260801-162658.json#seed=обслуживание-пожарной-сигнализации-цена", "measured_at": "2026-08-01"},
+        {"query": "мониторинг пожарной сигнализации", "frequency_class": "medium", "frequency_value": 490, "source": "yandex-wordstat", "metric": "monthly_searches", "measurement_period": "last 30 days", "region": "Россия", "match_type": "broad phrase", "evidence_ref": "raw:seo/grifun/wordstat-20260801-162658.json#seed=мониторинг-пожарной-сигнализации", "measured_at": "2026-08-01"},
+        {"query": "ремонт пожарной сигнализации", "frequency_class": "high", "frequency_value": 3308, "source": "yandex-wordstat", "metric": "monthly_searches", "measurement_period": "last 30 days", "region": "Россия", "match_type": "broad phrase", "evidence_ref": "raw:seo/grifun/wordstat-20260801-162658.json#seed=ремонт-пожарной-сигнализации", "measured_at": "2026-08-01"}
+      ]
+    }
+  }
+}
