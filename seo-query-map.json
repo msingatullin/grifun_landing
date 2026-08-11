@@ -7,6 +7,34 @@
     "fstek_longtail": "raw:seo/grifun/wordstat-20260801-162727.json",
     "classification": "НЧ <= 28; СЧ 29-839; ВЧ >= 840 запросов за последние 30 дней по РФ"
   },
+  "pages": {
+    "ryazan-video-surveillance-service": {
+      "primary_query": "видеонаблюдение рязань",
+      "related_queries": [
+        "установка видеонаблюдения рязань",
+        "камеры видеонаблюдения рязань",
+        "монтаж видеонаблюдения",
+        "видеонаблюдение для бизнеса"
+      ],
+      "intent": "commercial",
+      "region": "Рязань и Рязанская область",
+      "language": "ru",
+      "target_url": "https://www.grifun.ru/",
+      "supporting_pages": [
+        "https://www.grifun.ru/blog/"
+      ],
+      "cannibalization_status": "passed",
+      "cannibalization_boundary": "Главная является единственной индексируемой посадочной для общего коммерческого интента по видеонаблюдению в Рязани. Дублирующий маршрут /regions/ryazan/ryazan/ исключён из sitemap, закрыт noindex и указывает canonical на главную. Городские страницы вне Рязани сохраняют отдельный географический intent.",
+      "internal_link_plan": "Региональные страницы и релевантные статьи ссылаются на главную как на основную услугу в Рязани; новые страницы для вариантов этого же интента не создаются.",
+      "measurements": [
+        {"query": "видеонаблюдение рязань", "frequency_class": "high", "frequency_value": 982, "source": "yandex-wordstat", "metric": "monthly_searches", "measurement_period": "last 30 days", "region": "Россия", "match_type": "broad phrase", "evidence_ref": "raw:seo/grifun/wordstat-20260801-162521.json#seed=видеонаблюдение-рязань", "measured_at": "2026-08-01"},
+        {"query": "установка видеонаблюдения рязань", "frequency_class": "medium", "frequency_value": 56, "source": "yandex-wordstat", "metric": "monthly_searches", "measurement_period": "last 30 days", "region": "Россия", "match_type": "broad phrase", "evidence_ref": "raw:seo/grifun/wordstat-20260801-162521.json#seed=видеонаблюдение-рязань", "measured_at": "2026-08-01"},
+        {"query": "камеры видеонаблюдения рязань", "frequency_class": "medium", "frequency_value": 353, "source": "yandex-wordstat", "metric": "monthly_searches", "measurement_period": "last 30 days", "region": "Россия", "match_type": "broad phrase", "evidence_ref": "raw:seo/grifun/wordstat-20260801-162521.json#seed=видеонаблюдение-рязань", "measured_at": "2026-08-01"},
+        {"query": "монтаж видеонаблюдения", "frequency_class": "high", "frequency_value": 7405, "source": "yandex-wordstat", "metric": "monthly_searches", "measurement_period": "last 30 days", "region": "Россия", "match_type": "broad phrase", "evidence_ref": "raw:seo/grifun/wordstat-20260801-162521.json#seed=видеонаблюдение", "measured_at": "2026-08-01"},
+        {"query": "видеонаблюдение для бизнеса", "frequency_class": "high", "frequency_value": 1877, "source": "yandex-wordstat", "metric": "monthly_searches", "measurement_period": "last 30 days", "region": "Россия", "match_type": "broad phrase", "evidence_ref": "raw:seo/grifun/wordstat-20260801-162521.json#seed=видеонаблюдение-для-бизнеса", "measured_at": "2026-08-01"}
+      ]
+    }
+  },
   "articles": {
     "fstek-pdn-2026-server-audit": {
       "primary_query": "фстэк персональные данные 2026",
