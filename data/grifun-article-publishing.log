@@ -1,0 +1,94 @@
+START topics=477
+[16/477] OK vms-metadata-migration-hikvision-trassir
+[17/477] OK poe-thermal-protection-outdoor-cctv
+[18/477] OK wifi-interference-audit-office-spectrum
+[19/477] OK technical-debt-audit-before-outsourcing
+[20/477] OK fire-alarm-insulation-leakage-diagnostic
+[21/477] OK optical-loss-budget-10g-diagnostics
+[22/477] OK managed-soc-as-a-service-smb
+[23/477] OK cctv-bandwidth-h265-lte-diagnostics
+[24/477] OK backup-rto-rpo-cloud-measurement
+[25/477] OK admin-transition-security-audit
+[26/477] OK poe-802-3bt-qtech-diagnostics
+[27/477] OK wifi6-twt-battery-diagnostic-warehouse
+[28/477] OK server-ipmi-predictive-failure-monitoring
+[29/477] OK fire-detector-smoke-chamber-diagnostic
+[30/477] OK itam-shadow-it-diagnostic-audit
+[31/477] OK itam-shadow-it-transition-audit
+[32/477] OK cctv-metadata-vms-migration-diagnostics
+[33/477] OK scs-alien-crosstalk-10g-diagnostics
+[34/477] OK poe-extended-mode-voltage-diagnostics
+[35/477] OK yadro-nvme-of-latency-diagnostics
+[36/477] OK fstek-personal-data-2026-audit
+[37/477] OK orphaned-scripts-admin-transition-audit
+[38/477] OK cloud-s3-restore-speed-diagnostics
+[39/477] OK fire-alarm-smoke-chamber-dust-diagnostics
+[40/477] OK wifi6-twt-iot-battery-diagnostics
+[41/477] OK sks-fiber-optic-aging-diagnostics
+[42/477] OK ai-video-analytics-loitering-diagnostics
+[43/477] OK usergate-ssl-throughput-diagnostics
+[44/477] OK yadro-raid-rebuild-performance-impact
+[45/477] OK it-vendor-technical-stack-audit
+[46/477] OK poe-thermal-bundle-load-diagnostics
+[47/477] OK cyberprotect-s3-immutable-diagnostics
+[48/477] OK eltex-switch-loopback-detection-config
+[49/477] OK wifi-dfs-interference-diagnostics
+[50/477] OK aspiration-smoke-detector-filter-diagnostics
+[51/477] OK it-bus-factor-risk-diagnostics
+[52/477] OK cctv-privacy-mask-compliance-audit
+[53/477] OK scs-labeling-tia-606-c-audit
+[54/477] OK lan-rogue-switch-detection-diagnostics
+[55/477] OK poe-class-negotiation-failure-diagnostics
+[56/477] OK elevator-wifi-interference-diagnostics
+[57/477] OK server-cabinet-airflow-diagnostics
+[58/477] OK byod-backup-security-audit
+[59/477] OK astra-linux-kernel-log-diagnostics
+[60/477] OK fire-ups-redundancy-diagnostics-gost
+[61/477] FAILED fstek-pdn-2026-server-audit: ai.com/v1/responses
+ERROR: Reconnecting... 5/5
+2026-07-29T01:33:33.149794Z ERROR codex_api::endpoint::responses_websocket: failed to connect to websocket: HTTP error: 401 Unauthorized, url: wss://api.openai.com/v1/responses
+warning: Falling back from WebSockets to HTTPS transport. unexpected status 401 Unauthorized: Missing bearer or basic authentication in header, url: wss://api.openai.com/v1/responses, cf-ray: a22860478c9218ae-AMS
+ERROR: Reconnecting... 1/5
+ERROR: Reconnecting... 2/5
+ERROR: Reconnecting... 3/5
+ERROR: Reconnecting... 4/5
+ERROR: Reconnecting... 5/5
+ERROR: unexpected status 401 Unauthorized: Missing bearer or basic authentication in header, url: https://api.openai.com/v1/responses, cf-ray: a22860787ceb1823-AMS, request id: 44208384-e24d-474e-8af2-5d002c8505f1
+ERROR: unexpected status 401 Unauthorized: Missing bearer or basic authentication in header, url: https://api.openai.com/v1/responses, cf-ray: a22860787ceb1823-AMS, request id: 44208384-e24d-474e-8af2-5d002c8505f1
+
+[62/477] FAILED gost-59638-repair-sla-telemetry: ai.com/v1/responses
+ERROR: Reconnecting... 5/5
+2026-07-29T01:33:51.536915Z ERROR codex_api::endpoint::responses_websocket: failed to connect to websocket: HTTP error: 401 Unauthorized, url: wss://api.openai.com/v1/responses
+warning: Falling back from WebSockets to HTTPS transport. unexpected status 401 Unauthorized: Missing bearer or basic authentication in header, url: wss://api.openai.com/v1/responses, cf-ray: a22860ba7ebc5b28-AMS
+ERROR: Reconnecting... 1/5
+ERROR: Reconnecting... 2/5
+ERROR: Reconnecting... 3/5
+ERROR: Reconnecting... 4/5
+ERROR: Reconnecting... 5/5
+ERROR: unexpected status 401 Unauthorized: Missing bearer or basic authentication in header, url: https://api.openai.com/v1/responses, cf-ray: a22860ea8b16feb3-AMS, request id: b2f7408d-40b9-4644-83fa-ec2dfcc3d6ed
+ERROR: unexpected status 401 Unauthorized: Missing bearer or basic authentication in header, url: https://api.openai.com/v1/responses, cf-ray: a22860ea8b16feb3-AMS, request id: b2f7408d-40b9-4644-83fa-ec2dfcc3d6ed
+
+[63/477] FAILED highway-lte-cctv-connectivity-check: ai.com/v1/responses
+ERROR: Reconnecting... 5/5
+2026-07-29T01:34:11.204281Z ERROR codex_api::endpoint::responses_websocket: failed to connect to websocket: HTTP error: 401 Unauthorized, url: wss://api.openai.com/v1/responses
+warning: Falling back from WebSockets to HTTPS transport. unexpected status 401 Unauthorized: Missing bearer or basic authentication in header, url: wss://api.openai.com/v1/responses, cf-ray: a22861358d07d5a3-AMS
+ERROR: Reconnecting... 1/5
+ERROR: Reconnecting... 2/5
+ERROR: Reconnecting... 3/5
+ERROR: Reconnecting... 4/5
+ERROR: Reconnecting... 5/5
+ERROR: unexpected status 401 Unauthorized: Missing bearer or basic authentication in header, url: https://api.openai.com/v1/responses, cf-ray: a22861645818d655-AMS, request id: ce3aa86d-b7f8-48a0-bae0-330f73841058
+ERROR: unexpected status 401 Unauthorized: Missing bearer or basic authentication in header, url: https://api.openai.com/v1/responses, cf-ray: a22861645818d655-AMS, request id: ce3aa86d-b7f8-48a0-bae0-330f73841058
+
+[64/477] FAILED fluke-tester-calibration-arshin-risks: ai.com/v1/responses
+ERROR: Reconnecting... 5/5
+2026-07-29T01:34:29.552050Z ERROR codex_api::endpoint::responses_websocket: failed to connect to websocket: HTTP error: 401 Unauthorized, url: wss://api.openai.com/v1/responses
+warning: Falling back from WebSockets to HTTPS transport. unexpected status 401 Unauthorized: Missing bearer or basic authentication in header, url: wss://api.openai.com/v1/responses, cf-ray: a22861a7985d668d-AMS
+ERROR: Reconnecting... 1/5
+ERROR: Reconnecting... 2/5
+ERROR: Reconnecting... 3/5
+ERROR: Reconnecting... 4/5
+ERROR: Reconnecting... 5/5
+ERROR: unexpected status 401 Unauthorized: Missing bearer or basic authentication in header, url: https://api.openai.com/v1/responses, cf-ray: a22861d87a812656-AMS, request id: 8ec8f320-cade-400e-b058-0a74202c67ed
+ERROR: unexpected status 401 Unauthorized: Missing bearer or basic authentication in header, url: https://api.openai.com/v1/responses, cf-ray: a22861d87a812656-AMS, request id: 8ec8f320-cade-400e-b058-0a74202c67ed
+
