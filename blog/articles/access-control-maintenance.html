@@ -186,6 +186,14 @@
     ]
   }
   </script>
+
+  <style id="grifun-funnel-style">
+    .funnel-box{margin:40px 0 8px;padding:28px;border:1px solid #cbd8dc;border-radius:14px;background:#f5f9fa}
+    .funnel-box h2{margin-top:0}.funnel-next{padding-left:20px}.funnel-actions{display:flex;flex-wrap:wrap;gap:12px;margin:22px 0}
+    .funnel-actions a{display:inline-block;padding:12px 16px;border-radius:8px;background:#176b78;color:#fff;text-decoration:none;font-weight:700}
+    .funnel-actions a.secondary{background:#fff;color:#176b78;border:1px solid #176b78}.funnel-related{margin-bottom:0}
+    @media(max-width:600px){.funnel-box{padding:20px}.funnel-actions a{width:100%;box-sizing:border-box;text-align:center}}
+  </style>
 </head>
 <body>
   <main>
@@ -329,6 +337,18 @@
         <h2>Обследование и работы по СКУД</h2>
         <p>Если требуется оценить состояние установленной системы, подготовить перечень регулярных проверок или выполнить технические работы, можно <a href="/">обсудить задачу с Grifun</a>. Для начала потребуются схема объекта, состав оборудования, описание режимов прохода и известные замечания по эксплуатации.</p>
       </aside>
+    
+      <section class="funnel-box" id="client-next-step" data-funnel-cluster="access">
+        <h2>Нужно обследовать или модернизировать СКУД?</h2>
+        <p>Grifun поможет проверить точки прохода, контроллеры, права доступа и связи с видеонаблюдением, а затем отделить настройку от работ, требующих модернизации.</p>
+        <p><strong>Следующий шаг:</strong> Укажите число дверей и пользователей, тип идентификаторов и задачу: новый монтаж, неисправность или интеграция.</p>
+        <div class="funnel-actions">
+          <a href="/?utm_source=grifun_blog&amp;utm_medium=content&amp;utm_campaign=access-control-maintenance&amp;utm_content=cta#contact" data-funnel-action="lead">Обсудить задачу по СКУД</a>
+          <a class="secondary" href="/#services" data-funnel-action="services">Посмотреть услуги Grifun</a>
+          <a class="secondary" href="https://t.me/msrzn007" target="_blank" rel="noopener" data-funnel-action="telegram">Написать в Telegram</a>
+        </div>
+        <p class="funnel-related"><strong>По теме:</strong> <a href="/blog/articles/access-control-time-tracking.html">Учет рабочего времени скуд: данные, правила и ограничения</a> · <a href="/blog/articles/access-control-design.html">Проектирование скуд: точки прохода, сценарии и документация</a></p>
+      </section>
     </article>
   </main>
 </body>

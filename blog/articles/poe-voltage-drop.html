@@ -75,6 +75,14 @@
     ]
   }
   </script>
+
+  <style id="grifun-funnel-style">
+    .funnel-box{margin:40px 0 8px;padding:28px;border:1px solid #cbd8dc;border-radius:14px;background:#f5f9fa}
+    .funnel-box h2{margin-top:0}.funnel-next{padding-left:20px}.funnel-actions{display:flex;flex-wrap:wrap;gap:12px;margin:22px 0}
+    .funnel-actions a{display:inline-block;padding:12px 16px;border-radius:8px;background:#176b78;color:#fff;text-decoration:none;font-weight:700}
+    .funnel-actions a.secondary{background:#fff;color:#176b78;border:1px solid #176b78}.funnel-related{margin-bottom:0}
+    @media(max-width:600px){.funnel-box{padding:20px}.funnel-actions a{width:100%;box-sizing:border-box;text-align:center}}
+  </style>
 </head>
 <body>
   <header>
@@ -222,6 +230,18 @@
         <h2>Итог</h2>
         <p>Падение напряжения PoE определяется не номинальной длиной кабеля как таковой, а произведением рабочего тока на эффективное сопротивление всей цепи. Качественная оценка учитывает материал и сечение жил, параллельные пути тока, соединители, температуру и максимальный режим нагрузки. Проверяемый результат — достаточное напряжение на входе устройства под нагрузкой при приемлемом сопротивлении и без существенного разбаланса проводников.</p>
         <p>Если параметры трассы неизвестны или расчет показывает малый запас, специалисты инженерного проекта Grifun могут обсудить обследование линии и необходимые работы по видеонаблюдению, СКС и сетевой инфраструктуре. Описание направлений и способы связи доступны на <a href="/">сайте Grifun</a>, а дополнительные технические материалы — в <a href="/blog/">блоге проекта</a>.</p>
+      </section>
+    
+      <section class="funnel-box" id="client-next-step" data-funnel-cluster="cctv">
+        <h2>Нужно проверить или развить видеонаблюдение на объекте?</h2>
+        <p>Grifun может обследовать камеры, линии, питание, сеть и архив, затем зафиксировать найденные ограничения и состав работ без замены оборудования наугад.</p>
+        <p><strong>Следующий шаг:</strong> Укажите тип объекта, число камер и проблему; если есть — приложите схему или фотографии оборудования.</p>
+        <div class="funnel-actions">
+          <a href="/?utm_source=grifun_blog&amp;utm_medium=content&amp;utm_campaign=poe-voltage-drop&amp;utm_content=cta#contact" data-funnel-action="lead">Обсудить обследование видеонаблюдения</a>
+          <a class="secondary" href="/#services" data-funnel-action="services">Посмотреть услуги Grifun</a>
+          <a class="secondary" href="https://t.me/msrzn007" target="_blank" rel="noopener" data-funnel-action="telegram">Написать в Telegram</a>
+        </div>
+        <p class="funnel-related"><strong>По теме:</strong> <a href="/blog/articles/cctv-hard-drive.html">Выбор жесткого диска для видеонаблюдения: емкость и рабочая нагрузка</a> · <a href="/blog/articles/cctv-remote-access.html">Настройка удаленного доступа к видеонаблюдению: безопасные варианты подключения</a></p>
       </section>
     </article>
   </main>

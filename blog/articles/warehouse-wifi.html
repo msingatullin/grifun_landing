@@ -62,6 +62,14 @@
     ]
   }
   </script>
+
+  <style id="grifun-funnel-style">
+    .funnel-box{margin:40px 0 8px;padding:28px;border:1px solid #cbd8dc;border-radius:14px;background:#f5f9fa}
+    .funnel-box h2{margin-top:0}.funnel-next{padding-left:20px}.funnel-actions{display:flex;flex-wrap:wrap;gap:12px;margin:22px 0}
+    .funnel-actions a{display:inline-block;padding:12px 16px;border-radius:8px;background:#176b78;color:#fff;text-decoration:none;font-weight:700}
+    .funnel-actions a.secondary{background:#fff;color:#176b78;border:1px solid #176b78}.funnel-related{margin-bottom:0}
+    @media(max-width:600px){.funnel-box{padding:20px}.funnel-actions a{width:100%;box-sizing:border-box;text-align:center}}
+  </style>
 </head>
 <body>
   <header>
@@ -185,6 +193,18 @@
       <p>Надежный wifi для склада строится вокруг реальных устройств, рабочих маршрутов и измеряемых критериев. Сначала фиксируют сценарии и ограничения клиентов, затем моделируют покрытие, обследуют объект, подбирают антенны и размещение, настраивают каналы и мощность. После монтажа сеть проверяют штатными терминалами при рабочем заполнении склада и документируют результаты.</p>
 
       <p>Если требуется обсудить радиообследование, размещение точек доступа, СКС или сетевые работы, можно обратиться к специалистам <a href="/">Grifun</a>. Состав и границы работ определяются после уточнения объекта, оборудования и требований складских приложений.</p>
+    
+      <section class="funnel-box" id="client-next-step" data-funnel-cluster="network">
+        <h2>Нужна диагностика СКС, Wi‑Fi или локальной сети?</h2>
+        <p>Grifun может обследовать трассы и активное оборудование, локализовать узкое место и подготовить проверяемый перечень работ для монтажа или исправления сети.</p>
+        <p><strong>Следующий шаг:</strong> Укажите площадь и назначение объекта, число рабочих мест или точек доступа и наблюдаемые симптомы.</p>
+        <div class="funnel-actions">
+          <a href="/?utm_source=grifun_blog&amp;utm_medium=content&amp;utm_campaign=warehouse-wifi&amp;utm_content=cta#contact" data-funnel-action="lead">Обсудить обследование сети</a>
+          <a class="secondary" href="/#services" data-funnel-action="services">Посмотреть услуги Grifun</a>
+          <a class="secondary" href="https://t.me/msrzn007" target="_blank" rel="noopener" data-funnel-action="telegram">Написать в Telegram</a>
+        </div>
+        <p class="funnel-related"><strong>По теме:</strong> <a href="/blog/articles/vlan-configuration.html">Настройка vlan: логическая сегментация корпоративной сети</a> · <a href="/blog/articles/network-loop-protection.html">Защита от петель в сети: предотвращение широковещательных штормов</a></p>
+      </section>
     </article>
   </main>
 </body>

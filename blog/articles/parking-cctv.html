@@ -62,6 +62,14 @@
     ]
   }
   </script>
+
+  <style id="grifun-funnel-style">
+    .funnel-box{margin:40px 0 8px;padding:28px;border:1px solid #cbd8dc;border-radius:14px;background:#f5f9fa}
+    .funnel-box h2{margin-top:0}.funnel-next{padding-left:20px}.funnel-actions{display:flex;flex-wrap:wrap;gap:12px;margin:22px 0}
+    .funnel-actions a{display:inline-block;padding:12px 16px;border-radius:8px;background:#176b78;color:#fff;text-decoration:none;font-weight:700}
+    .funnel-actions a.secondary{background:#fff;color:#176b78;border:1px solid #176b78}.funnel-related{margin-bottom:0}
+    @media(max-width:600px){.funnel-box{padding:20px}.funnel-actions a{width:100%;box-sizing:border-box;text-align:center}}
+  </style>
 </head>
 <body>
   <header>
@@ -200,6 +208,18 @@
       <p>Рабочее видеонаблюдение для парковки начинается со сценариев, а не с количества камер. Въезды требуют контролируемого ракурса, проезды — непрерывности траектории, машиноместа — учёта перекрытий, пешеходные зоны — проверки реальных маршрутов, периметр — обзора пространства подхода. Качество подтверждается натурным тестом в разных условиях и перечнем измеримых критериев.</p>
 
       <p>Grifun выполняет инженерные работы по видеонаблюдению и смежной инфраструктуре. Чтобы обсудить обследование парковки, исходные планы или состав работ, можно <a href="/">связаться с Grifun</a>. До обследования полезно подготовить схему движения, перечень критичных зон и несколько примеров событий, которые должна помогать разбирать система.</p>
+    
+      <section class="funnel-box" id="client-next-step" data-funnel-cluster="cctv">
+        <h2>Нужно проверить или развить видеонаблюдение на объекте?</h2>
+        <p>Grifun может обследовать камеры, линии, питание, сеть и архив, затем зафиксировать найденные ограничения и состав работ без замены оборудования наугад.</p>
+        <p><strong>Следующий шаг:</strong> Укажите тип объекта, число камер и проблему; если есть — приложите схему или фотографии оборудования.</p>
+        <div class="funnel-actions">
+          <a href="/?utm_source=grifun_blog&amp;utm_medium=content&amp;utm_campaign=parking-cctv&amp;utm_content=cta#contact" data-funnel-action="lead">Обсудить обследование видеонаблюдения</a>
+          <a class="secondary" href="/#services" data-funnel-action="services">Посмотреть услуги Grifun</a>
+          <a class="secondary" href="https://t.me/msrzn007" target="_blank" rel="noopener" data-funnel-action="telegram">Написать в Telegram</a>
+        </div>
+        <p class="funnel-related"><strong>По теме:</strong> <a href="/blog/articles/cctv-over-lte.html">Видеонаблюдение через lte: расчет канала и схема подключения</a> · <a href="/blog/articles/offline-cctv.html">Видеонаблюдение без интернета: автономная запись и локальный доступ</a></p>
+      </section>
     </article>
   </main>
 </body>

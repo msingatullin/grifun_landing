@@ -56,6 +56,14 @@
     ]
   }
   </script>
+
+  <style id="grifun-funnel-style">
+    .funnel-box{margin:40px 0 8px;padding:28px;border:1px solid #cbd8dc;border-radius:14px;background:#f5f9fa}
+    .funnel-box h2{margin-top:0}.funnel-next{padding-left:20px}.funnel-actions{display:flex;flex-wrap:wrap;gap:12px;margin:22px 0}
+    .funnel-actions a{display:inline-block;padding:12px 16px;border-radius:8px;background:#176b78;color:#fff;text-decoration:none;font-weight:700}
+    .funnel-actions a.secondary{background:#fff;color:#176b78;border:1px solid #176b78}.funnel-related{margin-bottom:0}
+    @media(max-width:600px){.funnel-box{padding:20px}.funnel-actions a{width:100%;box-sizing:border-box;text-align:center}}
+  </style>
 </head>
 <body>
   <header>
@@ -214,6 +222,18 @@
       <p>Для управляемой инфраструктуры наиболее предсказуемая схема — VPN с индивидуальными профилями и ограниченными маршрутами. Облачный доступ удобен при отсутствии публичного IP, если приемлема зависимость от платформы производителя. Проброс портов остается возможным, но требует минимизации опубликованных сервисов и регулярного контроля конфигурации.</p>
 
       <p>Перед вводом доступа в эксплуатацию нужно подтвердить работу из внешней сети, проверить права пользователей, пропускную способность, восстановление учетных записей и поведение системы после перезапуска. Если существующая сеть неизвестна или оборудование настроено разрозненно, <a href="/">с Grifun можно обсудить обследование объекта или инженерные работы</a>: сначала фиксируются фактическая схема и ограничения, после чего выбирается подходящий способ подключения.</p>
+    
+      <section class="funnel-box" id="client-next-step" data-funnel-cluster="cctv">
+        <h2>Нужно проверить или развить видеонаблюдение на объекте?</h2>
+        <p>Grifun может обследовать камеры, линии, питание, сеть и архив, затем зафиксировать найденные ограничения и состав работ без замены оборудования наугад.</p>
+        <p><strong>Следующий шаг:</strong> Укажите тип объекта, число камер и проблему; если есть — приложите схему или фотографии оборудования.</p>
+        <div class="funnel-actions">
+          <a href="/?utm_source=grifun_blog&amp;utm_medium=content&amp;utm_campaign=cctv-remote-access&amp;utm_content=cta#contact" data-funnel-action="lead">Обсудить обследование видеонаблюдения</a>
+          <a class="secondary" href="/#services" data-funnel-action="services">Посмотреть услуги Grifun</a>
+          <a class="secondary" href="https://t.me/msrzn007" target="_blank" rel="noopener" data-funnel-action="telegram">Написать в Telegram</a>
+        </div>
+        <p class="funnel-related"><strong>По теме:</strong> <a href="/blog/articles/cctv-redundancy.html">Резервирование видеонаблюдения: отказоустойчивая архитектура системы</a> · <a href="/blog/articles/cctv-cybersecurity.html">Кибербезопасность видеонаблюдения: защита камер, регистраторов и доступа</a></p>
+      </section>
     </article>
   </main>
 </body>
